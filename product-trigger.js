@@ -17,7 +17,7 @@ AFRAME.registerComponent('product-collector', {
         let data = this.data;
         const correctProduct = document.querySelectorAll(".Items").length - 1;
         let costprice = document.getElementById("cost-price");
-        var cost = costprice.getAttribute('price');
+        var cost = Number(costprice.getAttribute('price'));
         
         var wrongProduct;
         console.log('corrrect ' + el);
