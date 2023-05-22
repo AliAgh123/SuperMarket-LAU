@@ -18,7 +18,6 @@ function set_timer(time) {
 
 function start_game() {
     var gameDiv = document.getElementById('game');
-
     var data = {
         funcName: 'start_game',
         params: []
