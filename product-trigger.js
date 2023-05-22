@@ -15,6 +15,7 @@ AFRAME.registerComponent('product-collector', {
         let el = this.el;
         let data = this.data;
         const correctProduct = document.querySelectorAll(".Items").length - 1;
+        var cost = 0;
         var wrongProduct;
         console.log('corrrect ' + el);
         el.addEventListener("correctCollect", function() {
@@ -50,6 +51,8 @@ AFRAME.registerComponent('product-collector', {
                     new_element.setAttribute("scale", "1 1 1");
 
                     document.getElementById('trolly').appendChild(new_element);
+                    cost+=100;
+                    console.log("The price now is: {cost}$");
                 }, 1000);
             }, 1000);
             items++;
