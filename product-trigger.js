@@ -22,7 +22,7 @@ AFRAME.registerComponent('product-collector', {
         var wrongProduct;
         console.log('corrrect ' + el);
         el.addEventListener("correctCollect", function() {
-            cost += 100;
+            cost = cost + 100;
             costprice.setAttribute('text', 'value', "cost price is " + cost + "$");
             costprice.setAttribute('price', cost)
             // hlioynntrgnfl correctProduct=document.querySelectorAll('.newItems');  
