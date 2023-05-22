@@ -10,10 +10,9 @@ AFRAME.registerComponent('product', {
 
         let el = this.el;
         let product;
-        let costprice = document.getElementById("cost-price");
         el.firstElementChild.addEventListener('correct', () => {
             cost+=100;
-            costprice.setAttribute('text', 'value', "cost price is ");
+            costprice.setAttribute('text', 'value', "cost price is " + cost + "$")
             var correctLight = document.createElement('a-entity');
             correctLight.setAttribute("area-light", "intensity:1; width:1; height:1; color:green;showHelper:false");
             correctLight.setAttribute("id", "greenLight");
