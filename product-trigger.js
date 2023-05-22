@@ -1,6 +1,8 @@
 window.correctProducts = 0;
 window.wrongProducts = 0;
 const ADD_VALUE = 0.1;
+var cost = 0;
+
 
 window.x = -0.2;
 window.y = 0;
@@ -16,7 +18,7 @@ AFRAME.registerComponent('product-collector', {
         let data = this.data;
         const correctProduct = document.querySelectorAll(".Items").length - 1;
         let costprice = document.getElementById("cost-price");
-        var cost = 0;
+        
         var wrongProduct;
         console.log('corrrect ' + el);
         el.addEventListener("correctCollect", function() {

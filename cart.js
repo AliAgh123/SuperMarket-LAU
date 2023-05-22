@@ -1,3 +1,5 @@
+var cost = 0;
+
 AFRAME.registerComponent('product', {
     schema: {
         myType: { type: 'string', default: 'correct' }
@@ -9,6 +11,8 @@ AFRAME.registerComponent('product', {
         let el = this.el;
         let product;
         el.firstElementChild.addEventListener('correct', () => {
+            cost+=100;
+            costprice.setAttribute('text', 'value', "cost price is " + cost + "$")
             var correctLight = document.createElement('a-entity');
             correctLight.setAttribute("area-light", "intensity:1; width:1; height:1; color:green;showHelper:false");
             correctLight.setAttribute("id", "greenLight");
