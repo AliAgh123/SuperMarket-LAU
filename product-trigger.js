@@ -56,6 +56,7 @@ AFRAME.registerComponent('product-collector', {
                     new_element.setAttribute("scale", "1 1 1");
 
                     document.getElementById('trolly').appendChild(new_element);
+                    costprice.setAttribute('text', 'value', "cost price is 100$");
                     
                 }, 1000);
             }, 1000);
