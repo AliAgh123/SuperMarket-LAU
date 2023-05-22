@@ -15,10 +15,13 @@ AFRAME.registerComponent('product-collector', {
         let el = this.el;
         let data = this.data;
         const correctProduct = document.querySelectorAll(".Items").length - 1;
+        let costprice = document.getElementById("cost-price");
         var cost = 0;
         var wrongProduct;
         console.log('corrrect ' + el);
         el.addEventListener("correctCollect", function() {
+            cost+=100;
+            costprice.setAttribute('text', 'value', "cost price is " + cost + "$")
             // hlioynntrgnfl correctProduct=document.querySelectorAll('.newItems');  
             console.log('corrrect product' + el);
             el.setAttribute("animation", "property: scale; to:2 2 2; dur:2000; easing: linear; loop: false");
@@ -51,8 +54,7 @@ AFRAME.registerComponent('product-collector', {
                     new_element.setAttribute("scale", "1 1 1");
 
                     document.getElementById('trolly').appendChild(new_element);
-                    cost+=100;
-                    console.log("The price now is: {cost}$");
+                    
                 }, 1000);
             }, 1000);
             items++;
