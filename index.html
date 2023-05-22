@@ -89,8 +89,9 @@
                     <a-entity cursor="rayOrigin: mouse"></a-entity>
 
                     <a-text id="EndTxt" value="" position="0 2 -10" text="width: 5; alphaTest: 1.38; color: black"></a-text>
-                    <!-- <a-text id="cost-price" geometry="primitive: plane; width: 4; height: auto"
-                        material="color: blue" scale="0.5 0.5 0.5" position="3 3 5" visible="true" rotation="0 0 0"></a-entity> -->
+                    <a-text id="cost-price" geometry="primitive: plane; width: 4; height: auto"
+                        material="color: blue"
+                        animation-mixer rotation="90 -180 0" scale="0.5 0.5 0.5" position="3 3 5" visible="true" rotation="0 0 0"></a-entity>
                 </a-camera>
 
                 <a-entity dragndrop laser-controls="hand: right" raycaster="objects: .Items,.notItems,.clickable,#trolly; far: 100" product-collector></a-entity>
