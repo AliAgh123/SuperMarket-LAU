@@ -16,11 +16,11 @@ AFRAME.registerComponent('product-collector', {
         let el = this.el;
         let data = this.data;
         const correctProduct = document.querySelectorAll(".Items").length - 1;
-        let totalPrice = document.getElementById("total-price");
-        var cost = Number(totalPrice.getAttribute('price'));
+        let costprice = document.getElementById("cost-price");
+        var cost = Number(costprice.getAttribute('price'));
+        
         var wrongProduct;
         console.log('corrrect ' + el);
-        console.log("The price is " + cost);
         el.addEventListener("correctCollect", function() {
             cost = cost + 100;
             costprice.setAttribute('text', 'value', "cost price is " + cost + "$");
