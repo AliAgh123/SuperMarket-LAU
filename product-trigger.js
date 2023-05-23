@@ -34,9 +34,7 @@ AFRAME.registerComponent('product-collector', {
                 s += i.getAttribute('product-collector').productName + " " + i.getAttribute('product-collector').productName + "\n";
             }
             
-            // holdedProducts.push(data.productName);
             totalPrice.setAttribute('text', 'value', s);
-            totalPrice.setAttribute('price', cost);
             
             // el.setAttribute('material','color','blue');
             //  el.setAttribute('static-body', 'enabled:true');
