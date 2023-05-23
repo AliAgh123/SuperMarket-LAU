@@ -8,7 +8,8 @@ window.y = 0;
 window.z = -0.4;
 AFRAME.registerComponent('product-collector', {
     schema: {
-        myType: { type: 'string', default: 'correct' }
+        myType: { type: 'string', default: 'correct' },
+        price: { type: 'number', default: 0}
     },
 
     init: function() {
