@@ -20,7 +20,6 @@ AFRAME.registerComponent('product-collector', {
         const correctProduct = document.querySelectorAll(".Items").length - 1;
         let totalPrice = document.getElementById("total-price");
         var cost = Number(totalPrice.getAttribute('price'));
-        alert("initiated the product")
         var wrongProduct;
         console.log('corrrect ' + el);
         console.log("The price is " + data.price + "\nThe name of the product is " + data.productName + "\nThe total price is " + cost);

@@ -7,7 +7,8 @@ AFRAME.registerComponent("dragndrop", {
     init: function() {
         var el = this.el;
         var camera = document.getElementById("cam")
-            /* var dist = null
+        console.log("dragndrop is initialized")
+            var dist = null
              var dir = new THREE.Vector3()
 
              var scene = document.querySelector('a-scene');
@@ -31,10 +32,11 @@ AFRAME.registerComponent("dragndrop", {
              this.el.addEventListener("click", e => {
                  // complete the drag when click completed
                  this.el.removeState("being-dragged")
-             })*/
+             })
         el.addEventListener("raycaster-intersection", e => {
-            console.log(e.detail.els.map((x) => x.id)[0]);
-            var id = e.detail.els.map((x) => x.id)[0];
+            alert("entered the raycaster-intersection eventlistener");
+            console.log(e.detail.el.map((x) => x.id)[0]);
+            var id = e.detail.el.map((x) => x.id)[0];
             var element = document.getElementById(id);
             if (element.className == "Items" || element.className == "notItems") {
                 element.addEventListener("click", () => {
