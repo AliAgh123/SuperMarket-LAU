@@ -20,10 +20,12 @@ AFRAME.registerComponent('product-collector', {
         let totalPrice = document.getElementById("total-price");
         var cost = Number(totalPrice.getAttribute('price'));
         
+        console.log(this.data.price);
+
         var wrongProduct;
         console.log('corrrect ' + el);
         el.addEventListener("correctCollect", function() {
-            cost = cost + 100;
+            cost = cost + data.price;
             totalPrice.setAttribute('text', 'value', "cost price is " + cost + "$");
             totalPrice.setAttribute('price', cost)
             // hlioynntrgnfl correctProduct=document.querySelectorAll('.newItems');  
