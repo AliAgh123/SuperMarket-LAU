@@ -48,7 +48,7 @@ AFRAME.registerComponent('product-collector', {
             let holdedProducts = document.getElementsByClassName("trolly");
             let s = ""
             for(i of holdedProducts){
-                let addInfo = i.getAttribute('product-collector').productName + " " + i.getAttribute('product-collector').price;
+                let addInfo = i.getAttribute('product-collector').productName + " " + i.getAttribute('product-collector').price + " ";
                 s += addInfo;
             }
             
