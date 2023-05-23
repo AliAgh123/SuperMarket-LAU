@@ -114,13 +114,13 @@
 
 
 
-            <a-entity gltf-model="#butter" grabbable="" id="item1" class="Items" color="red" visible="" position="-1.955 0.70208 -4.4257" product-collector=""> </a-entity>
-            <a-entity gltf-model="#bread2" grabbable="" id="item3" class="Items" color="red" visible="" position="-1.65276 0.30233 -8.23202" product-collector=""> </a-entity>
-            <a-entity gltf-model="#egg" grabbable="" id="item2" class="Items" color="red" visible="true" position="-1.96192 1.4 -5.75553" product-collector=""> </a-entity>
-            <a-entity gltf-model="#milk" grabbable="" id="item4" class="Items" color="red" visible="" position="-1.94006 0.71651 -5.73918" product-collector=""> </a-entity>
-            <a-entity gltf-model="#biscuits" grabbable="" id="item5" class="Items" color="red" visible="" position="1.66273 0.81744 -10.24875" rotation="0 -90 0" product-collector=""> </a-entity>
-            <a-entity gltf-model="#cheese" grabbable="" id="item6" class="Items" color="red" visible="true" position="-1.7 0.5 -9" product-collector=""> </a-entity>
-            <a-entity gltf-model="#pizza" grabbable="" id="item7" class="Items" color="red" visible="true" position="5 2 -8" product-collector=""> </a-entity>
+            <a-entity gltf-model="#butter" grabbable="" id="item1" class="Items" color="red" visible="" position="-1.955 0.70208 -4.4257" product-collector="price: 20, productName: 'butter'"> </a-entity>
+            <a-entity gltf-model="#bread2" grabbable="" id="item3" class="Items" color="red" visible="" position="-1.65276 0.30233 -8.23202" product-collector="price: 5, productName: 'bread'"> </a-entity>
+            <a-entity gltf-model="#egg" grabbable="" id="item2" class="Items" color="red" visible="true" position="-1.96192 1.4 -5.75553" product-collector="price: 10, productName: 'egg'"> </a-entity>
+            <a-entity gltf-model="#milk" grabbable="" id="item4" class="Items" color="red" visible="" position="-1.94006 0.71651 -5.73918" product-collector="price: 15, productName: 'milk'"> </a-entity>
+            <a-entity gltf-model="#biscuits" grabbable="" id="item5" class="Items" color="red" visible="" position="1.66273 0.81744 -10.24875" rotation="0 -90 0" product-collector="price: 7, productName: 'biscuits'"> </a-entity>
+            <a-entity gltf-model="#cheese" grabbable="" id="item6" class="Items" color="red" visible="true" position="-1.7 0.5 -9" product-collector="price: 30, productName: 'cheese'"> </a-entity>
+            <a-entity gltf-model="#pizza" grabbable="" id="item7" class="Items" color="red" visible="true" position="5 2 -8" product-collector="price: 50, productName: 'pizza'"> </a-entity>
 
             <a-gltf-model id="trolly" product src="#cart" position="0 0.10 -1.002" rotation="0 -180 0" aabb-collider="objects: .Items,.notItems">
 
@@ -142,7 +142,7 @@
     ></a-entity>-----telepirt target path-->
 
 
-            <a-entity id="cost-price" geometry="primitive: plane; width: 4; height: auto" price="0"
+            <a-entity id="total-price" geometry="primitive: plane; width: 4; height: auto" price="0" pickedProductsNames="[]" pickedProductsPrices="[]"
                 material="color: blue" scale="0.5 0.5 0.5" position="5 2 5" visible="true" rotation="0 -90 0"></a-entity>
             
             <!-- cashier arrows -->
@@ -175,6 +175,23 @@
             <a-entity id="box21" gltf-model="#arrow" animation-mixer rotation="90 -180 0" scale="0.5 0.5 0.5" position="-5 2 -20" visible="true" class="clickable" blink-teleportation="pos: -5 0 -20; hide: true"></a-entity>
             <a-entity id="box22" gltf-model="#arrow" animation-mixer rotation="90 -180 0" scale="0.5 0.5 0.5" position="-10 2 -20" visible="true" class="clickable" blink-teleportation="pos: -10 0 -20; hide: true"></a-entity>
             
+
+            <a-entity id="box23" gltf-model="#arrow" animation-mixer rotation="90 -180 0" scale="0.5 0.5 0.5" position="0 2 -26" visible="true" class="clickable" blink-teleportation="pos: 0 0 -26; hide: true"></a-entity>
+            <a-entity id="box24" gltf-model="#arrow" animation-mixer rotation="90 -180 0" scale="0.5 0.5 0.5" position="5 2 -26" visible="true" class="clickable" blink-teleportation="pos: 5 0 -26; hide: true"></a-entity>
+            <a-entity id="box25" gltf-model="#arrow" animation-mixer rotation="90 -180 0" scale="0.5 0.5 0.5" position="10 2 -26" visible="true" class="clickable" blink-teleportation="pos: 10 0 -26; hide: true"></a-entity>
+            <a-entity id="box26" gltf-model="#arrow" animation-mixer rotation="90 -180 0" scale="0.5 0.5 0.5" position="-5 2 -26" visible="true" class="clickable" blink-teleportation="pos: -5 0 -26; hide: true"></a-entity>
+            <a-entity id="box27" gltf-model="#arrow" animation-mixer rotation="90 -180 0" scale="0.5 0.5 0.5" position="-10 2 -26" visible="true" class="clickable" blink-teleportation="pos: -10 0 -26; hide: true"></a-entity>
+            
+
+            <a-entity id="box28" gltf-model="#arrow" animation-mixer rotation="90 -180 0" scale="0.5 0.5 0.5" position="0 2 -32" visible="true" class="clickable" blink-teleportation="pos: 0 0 -32; hide: true"></a-entity>
+            <a-entity id="box29" gltf-model="#arrow" animation-mixer rotation="90 -180 0" scale="0.5 0.5 0.5" position="5 2 -32" visible="true" class="clickable" blink-teleportation="pos: 5 0 -32; hide: true"></a-entity>
+            <a-entity id="box30" gltf-model="#arrow" animation-mixer rotation="90 -180 0" scale="0.5 0.5 0.5" position="10 2 -32" visible="true" class="clickable" blink-teleportation="pos: 10 0 -32; hide: true"></a-entity>
+            <a-entity id="box31" gltf-model="#arrow" animation-mixer rotation="90 -180 0" scale="0.5 0.5 0.5" position="-5 2 -32" visible="true" class="clickable" blink-teleportation="pos: -5 0 -32; hide: true"></a-entity>
+            <a-entity id="box32" gltf-model="#arrow" animation-mixer rotation="90 -180 0" scale="0.5 0.5 0.5" position="-10 2 -32" visible="true" class="clickable" blink-teleportation="pos: -10 0 -32; hide: true"></a-entity>
+            
+
+
+
             <a-entity id="box23" gltf-model="#cashier" rotation="0 90 0"scale="0.5 0.5 0.5" position="1 0 3.5" visible="true"></a-entity>
 
             <!--    <a-entity id="box3" gltf-model="#arrow" animation-mixer  rotation = "90 -180 0" scale="0.5 0.5 0.5"  position="1 2 -5.73918" visible="true"  class="clickable" blink-teleportation="pos:1 1 -5.73918; hide: true"
