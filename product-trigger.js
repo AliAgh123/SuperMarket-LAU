@@ -20,16 +20,20 @@ AFRAME.registerComponent('product-collector', {
         const correctProduct = document.querySelectorAll(".Items").length - 1;
         let totalPrice = document.getElementById("total-price");
         var cost = Number(totalPrice.getAttribute('price'));
+        let holdedProducts = [totalPrice.getAttribute('holdedProducts')];
         
         console.log(this.data.price);
         console.log(this.data.productName);
+        console.log("the client is holding: " + holdedProducts);
 
         var wrongProduct;
         console.log('corrrect ' + el);
         el.addEventListener("correctCollect", function() {
             cost = cost + data.price;
+            holdedProducts.push(data.productName);
             totalPrice.setAttribute('text', 'value', "cost price is " + cost + "$ for the " + data.productName);
             totalPrice.setAttribute('price', cost)
+            totalPrice.setAttribute('holdedProducts', holdedProducts);
             // hlioynntrgnfl correctProduct=document.querySelectorAll('.newItems');  
             console.log('corrrect product' + el);
             el.setAttribute("animation", "property: scale; to:2 2 2; dur:2000; easing: linear; loop: false");
