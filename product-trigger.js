@@ -8,9 +8,7 @@ window.y = 0;
 window.z = -0.4;
 AFRAME.registerComponent('product-collector', {
     schema: {
-        myType: { type: 'string', default: 'correct' },
-        // price: {type: 'int', default: 0},
-        // productName: {type: 'string', default: 'product'}
+        myType: { type: 'string', default: 'correct' }
     },
 
     init: function() {
@@ -18,23 +16,14 @@ AFRAME.registerComponent('product-collector', {
         let el = this.el;
         let data = this.data;
         const correctProduct = document.querySelectorAll(".Items").length - 1;
-        let totalPrice = document.getElementById("total-price");
-        var cost = Number(totalPrice.getAttribute('price'));
-        // let productsNames = [totalPrice.getAttribute('pickedProductsNames')];
-        // let productPrices = [totalPrice.getAttribute('pickedProductsPrices')];
+        let costprice = document.getElementById("cost-price");
+        var cost = Number(costprice.getAttribute('price'));
         
         var wrongProduct;
         console.log('corrrect ' + el);
         el.addEventListener("correctCollect", function() {
-        
-            // productsNames.push(data.productName);
-            // productPrices.push(data.price);
-
-
-            // setting the total price
             cost = cost + 100;
-
-            costprice.setAttribute('text', 'value', "cost price is " + cost + "$\n");
+            costprice.setAttribute('text', 'value', "cost price is " + cost + "$");
             costprice.setAttribute('price', cost)
             // hlioynntrgnfl correctProduct=document.querySelectorAll('.newItems');  
             console.log('corrrect product' + el);
