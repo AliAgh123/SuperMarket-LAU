@@ -8,31 +8,31 @@ AFRAME.registerComponent("dragndrop", {
         var el = this.el;
         var camera = document.getElementById("cam")
         console.log("dragndrop is initialized")
-            var dist = null
-             var dir = new THREE.Vector3()
+            // var dist = null
+            //  var dir = new THREE.Vector3()
 
-             var scene = document.querySelector('a-scene');
-             var camera = document.querySelector('a-camera');
-             this.el.addEventListener("mousedown", e => {
-                 console.log(e.detail);
-                 // update the base distance between the cursor to the object
-                 dist = this.el.object3D.position.clone()
-                     .sub(camera.object3D.position).length()
+            //  var scene = document.querySelector('a-scene');
+            //  var camera = document.querySelector('a-camera');
+            //  this.el.addEventListener("mousedown", e => {
+            //      console.log(e.detail);
+            //      // update the base distance between the cursor to the object
+            //      dist = this.el.object3D.position.clone()
+            //          .sub(camera.object3D.position).length()
 
-                 dir.copy(scene.getAttribute("raycaster").direction)
+            //      dir.copy(scene.getAttribute("raycaster").direction)
 
-                 this.el.addState("being-dragged")
-             })
+            //      this.el.addState("being-dragged")
+            //  })
 
-             document.addEventListener("mousemove", () => {
-                 // update the direction from raycaster coponent
-                 dir.copy(scene.getAttribute("raycaster").direction)
-             })
+            //  document.addEventListener("mousemove", () => {
+            //      // update the direction from raycaster coponent
+            //      dir.copy(scene.getAttribute("raycaster").direction)
+            //  })
 
-             this.el.addEventListener("click", e => {
-                 // complete the drag when click completed
-                 this.el.removeState("being-dragged")
-             })
+            //  this.el.addEventListener("click", e => {
+            //      // complete the drag when click completed
+            //      this.el.removeState("being-dragged")
+            //  })
         el.addEventListener("raycaster-intersection", e => {
             console.log(e.detail.el.map((x) => x.id)[0]);
             var id = e.detail.el.map((x) => x.id)[0];
