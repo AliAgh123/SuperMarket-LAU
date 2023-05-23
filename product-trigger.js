@@ -18,11 +18,28 @@ AFRAME.registerComponent('product-collector', {
         let el = this.el;
         let data = this.data;
         const correctProduct = document.querySelectorAll(".Items").length - 1;
+        let totalPrice = document.getElementById("total-price");
+        var cost = Number(totalPrice.getAttribute('price'));
+        // let holdedProducts = [totalPrice.getAttribute('holdedProducts')];
+        
+        console.log(this.data.price);
+        console.log(this.data.productName);
+        // console.log("the client is holding: " + holdedProducts);
+        let items = document.getElementsByClassName("Items");
+        console.log(items);
+        console.log(items[0].getAttribute('product-collector').productName);
+        let ss = "";
+        for(i of items){
+            ss += i.getAttribute('product-collector').productName;
+        }
+        console.log(ss);
+
 
         var wrongProduct;
         console.log('corrrect ' + el.getAttribute('product-collector'));
         el.addEventListener("correctCollect", function() {
-
+            cost = cost + data.price;
+            
             // hlioynntrgnfl correctProduct=document.querySelectorAll('.newItems');  
             console.log('corrrect product' + el.getAttribute('product-collector').productName);
             el.setAttribute("animation", "property: scale; to:2 2 2; dur:2000; easing: linear; loop: false");
@@ -31,11 +48,11 @@ AFRAME.registerComponent('product-collector', {
             let holdedProducts = document.getElementsByClassName("trolly");
             let s = ""
             for(i of holdedProducts){
-                s += i.getAttribute('product-collector').productName + " " + i.getAttribute('product-collector').productName + " ";
+                s += i.getAttribute('product-collector').productName + " ";
             }
             
             // holdedProducts.push(data.productName);
-            totalPrice.setAttribute('text', 'value', s);
+            totalPrice.setAttribute('text', 'value', "cost price is " + cost + "$ for the " + data.productName + " the holded products are " + s);
             totalPrice.setAttribute('price', cost);
             
             // el.setAttribute('material','color','blue');
