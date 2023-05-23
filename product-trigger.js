@@ -37,13 +37,13 @@ AFRAME.registerComponent('product-collector', {
             el.className = "trolly"
             
             let holdedProducts = document.getElementsByClassName("trolly");
-            let s = ""
-            for(product of holdedProducts){
-                s = s + product.getAttribute("product-collector", "productName") + " ";
-            }
+            // let s = ""
+            // for(product of holdedProducts){
+            //     s = s + product + " ";
+            // }
             
             // holdedProducts.push(data.productName);
-            totalPrice.setAttribute('text', 'value', "cost price is " + cost + "$ for the " + data.productName + " the holded products are " + s);
+            totalPrice.setAttribute('text', 'value', "cost price is " + cost + "$ for the " + data.productName + " the holded products are " + holdedProducts[0]);
             totalPrice.setAttribute('price', cost);
             
             // el.setAttribute('material','color','blue');
