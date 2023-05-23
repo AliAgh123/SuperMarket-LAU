@@ -9,8 +9,8 @@ window.z = -0.4;
 AFRAME.registerComponent('product-collector', {
     schema: {
         myType: { type: 'string', default: 'correct' },
-        price: {type: 'int', default: 0},
-        productName: {type: 'string', default: 'product'}
+        // price: {type: 'int', default: 0},
+        // productName: {type: 'string', default: 'product'}
     },
 
     init: function() {
