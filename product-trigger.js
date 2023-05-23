@@ -8,9 +8,7 @@ window.y = 0;
 window.z = -0.4;
 AFRAME.registerComponent('product-collector', {
     schema: {
-        myType: { type: 'string', default: 'correct' },
-        price: { type: 'number', default: 0},
-        productName: { type: 'string', default: 'null'}
+        myType: { type: 'string', default: 'correct' }
     },
 
     init: function() {
@@ -22,10 +20,9 @@ AFRAME.registerComponent('product-collector', {
         var cost = Number(totalPrice.getAttribute('price'));
         var wrongProduct;
         console.log('corrrect ' + el);
-        console.log("The price is " + data.price + "\nThe name of the product is " + data.productName + "\nThe total price is " + cost);
+        console.log("The price is " + cost);
         el.addEventListener("correctCollect", function() {
             cost = cost + 100;
-            alert("entered the event listener")
             costprice.setAttribute('text', 'value', "cost price is " + cost + "$");
             costprice.setAttribute('price', cost)
             // hlioynntrgnfl correctProduct=document.querySelectorAll('.newItems');  
