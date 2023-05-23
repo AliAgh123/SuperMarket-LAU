@@ -31,7 +31,7 @@ AFRAME.registerComponent('product-collector', {
         el.addEventListener("correctCollect", function() {
             cost = cost + data.price;
             holdedProducts.push(data.productName);
-            totalPrice.setAttribute('text', 'value', "cost price is " + cost + "$ for the " + data.productName);
+            totalPrice.setAttribute('text', 'value', "cost price is " + cost + "$ for the " + data.productName + " the holded products are " + holdedProducts);
             totalPrice.setAttribute('price', cost)
             totalPrice.setAttribute('holdedProducts', holdedProducts);
             // hlioynntrgnfl correctProduct=document.querySelectorAll('.newItems');  
