@@ -53,7 +53,7 @@ AFRAME.registerComponent('product-collector', {
             }
             
             // holdedProducts.push(data.productName);
-            totalPrice.setAttribute('text', 'value', "cost price is " + cost + "$ for the " + data.productName + " the holded products are " + s);
+            totalPrice.setAttribute('text', 'value',  s);
             totalPrice.setAttribute('price', cost);
             
             // el.setAttribute('material','color','blue');
