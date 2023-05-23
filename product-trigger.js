@@ -47,11 +47,14 @@ AFRAME.registerComponent('product-collector', {
             
             let holdedProducts = document.getElementsByClassName("trolly");
             let s = ""
+            let sum = 0;
             for(i of holdedProducts){
                 let addInfo = i.getAttribute('product-collector').productName + " " + i.getAttribute('product-collector').price + " ";
+                sum += i.getAttribute('product-collector').price;
                 s += addInfo;
             }
-            
+            let text = "The total price is " + sum;
+            s += text;
             // holdedProducts.push(data.productName);
             totalPrice.setAttribute('text', 'value',  s);
             totalPrice.setAttribute('price', cost);
