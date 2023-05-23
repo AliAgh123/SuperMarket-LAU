@@ -47,6 +47,9 @@ AFRAME.registerComponent('blink-teleportation', {
             }
         }
 
+
+        alert("blink teleportation")
+
         // CREATE A TRANSPARENT BLACK IMAGE
         var blink = document.createElement('a-image');
         blink.setAttribute('material', {
