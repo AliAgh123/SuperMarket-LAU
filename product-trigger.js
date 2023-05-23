@@ -29,9 +29,9 @@ AFRAME.registerComponent('product-collector', {
             el.className = "trolly"
             
             let holdedProducts = document.getElementsByClassName("trolly");
-            let s = ""
+            var s = ""
             for(i of holdedProducts){
-                s += i.getAttribute('product-collector').productName + " " + i.getAttribute('product-collector').productName + " ";
+                s = s + i.getAttribute('product-collector').productName + " " + i.getAttribute('product-collector').price + " ";
             }
             
             totalPrice.setAttribute('text', 'value', s);
