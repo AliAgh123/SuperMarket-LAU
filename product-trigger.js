@@ -25,6 +25,12 @@ AFRAME.registerComponent('product-collector', {
         console.log(this.data.price);
         console.log(this.data.productName);
         // console.log("the client is holding: " + holdedProducts);
+        let items = document.getElementsByClassName("Items");
+        console.log(items);
+        console.log(items[0].getAttribute('product-collector').productName);
+
+
+
 
         var wrongProduct;
         console.log('corrrect ' + el);
@@ -37,10 +43,10 @@ AFRAME.registerComponent('product-collector', {
             el.className = "trolly"
             
             let holdedProducts = document.getElementsByClassName("trolly");
-            // let s = ""
-            // for(product of holdedProducts){
-            //     s = s + product + " ";
-            // }
+            let s = ""
+            for(product of holdedProducts){
+                s = s + product.getAttribute('product-collector').productName + " ";
+            }
             
             // holdedProducts.push(data.productName);
             totalPrice.setAttribute('text', 'value', "cost price is " + cost + "$ for the " + data.productName + " the holded products are " + holdedProducts[0]);
