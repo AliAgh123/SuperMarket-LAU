@@ -32,7 +32,7 @@ AFRAME.registerComponent('product-collector', {
 
 
             // setting the total price
-            cost = cost + data.price;
+            cost = cost + 100;
 
             costprice.setAttribute('text', 'value', "cost price is " + cost + "$\n");
             costprice.setAttribute('price', cost)
