@@ -30,15 +30,22 @@ AFRAME.registerComponent('product-collector', {
         console.log('corrrect ' + el);
         el.addEventListener("correctCollect", function() {
             cost = cost + data.price;
-            holdedProducts.push(data.productName);
-            totalPrice.setAttribute('text', 'value', "cost price is " + cost + "$ for the " + data.productName + " the holded products are " + holdedProducts);
-            totalPrice.setAttribute('price', cost)
-            totalPrice.setAttribute('holdedProducts', holdedProducts);
+            
             // hlioynntrgnfl correctProduct=document.querySelectorAll('.newItems');  
             console.log('corrrect product' + el);
             el.setAttribute("animation", "property: scale; to:2 2 2; dur:2000; easing: linear; loop: false");
             el.className = "trolly"
-
+            
+            holdedProducts = document.getElementsByClassName("trolly");
+            let s = ""
+            for(product of holdedProducts){
+                s = s + product.data.productName + " ";
+            }
+            
+            holdedProducts.push(data.productName);
+            totalPrice.setAttribute('text', 'value', "cost price is " + cost + "$ for the " + data.productName + " the holded products are " + s);
+            totalPrice.setAttribute('price', cost);
+            
             // el.setAttribute('material','color','blue');
             //  el.setAttribute('static-body', 'enabled:true');
             setTimeout(() => {
