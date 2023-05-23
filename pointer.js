@@ -34,7 +34,6 @@ AFRAME.registerComponent("dragndrop", {
                  this.el.removeState("being-dragged")
              })
         el.addEventListener("raycaster-intersection", e => {
-            alert("entered the raycaster-intersection eventlistener");
             console.log(e.detail.el.map((x) => x.id)[0]);
             var id = e.detail.el.map((x) => x.id)[0];
             var element = document.getElementById(id);
