@@ -38,9 +38,9 @@ AFRAME.registerComponent('product-collector', {
             
             let holdedProducts = document.getElementsByClassName("trolly");
             let s = ""
-            for(product of holdedProducts){
-                s = s + product.data.productName + " ";
-            }
+            // for(product of holdedProducts){
+            //     s = s + product.data.productName + " ";
+            // }
             
             holdedProducts.push(data.productName);
             totalPrice.setAttribute('text', 'value', "cost price is " + cost + "$ for the " + data.productName + " the holded products are " + s);
